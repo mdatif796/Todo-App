@@ -4,11 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Todo | App</title>
+    <script src="https://kit.fontawesome.com/1799259c11.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-    <h1>ejs file</h1>
+    <div id="main-container">
+        <div id="heading-container">
+            <h1 id="heading">TODO App</h1>
+        </div>
+        <div id="form-input">
+            <form action="" method="post">
+                <div id="description-section">
+                    <label for="description">DESCRIPTION</label>
+                    <input type="text" id="description" required placeholder="What do you need to do?">
+                </div>
+                <div id="category-dueDate">
+                    <div id="category-section">
+                        <label for="category">CATEGORY</label> 
+                        <select name="category" id="category">
+                            <option value="">Choose a category</option>
+                            <option value="Personal">Personal</option>
+                            <option value="Work">Work</option>
+                            <option value="School">School</option>
+                            <option value="Cleaning">Cleaning</option>
+                        </select> 
+                    </div>
+                    <div id="dueDate">
+                        <label for="date">DUE DATE</label>
+                        <input type="date" required id="date">
+                    </div>
+                </div>
+                <div id="add-delete">
+                    <button id="add-btn" type="submit">
+                        <i class="fa-solid fa-plus"></i>
+                          ADD TASK
+                    </button>
+                    <a href="">
+                        <button id="del-btn">
+                            <i class="fa-solid fa-trash-can"></i>
+                            DELETE TASKS
+                        </button>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script src="/js/home.js"></script>
 </body>
