@@ -4,6 +4,7 @@
   "description": "This is the TODO App where user can add the TODO with their description, category of TODO, due date and many functionality. This app is connected with database also.",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -11,5 +12,8 @@
     "task"
   ],
   "author": "Atif",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
