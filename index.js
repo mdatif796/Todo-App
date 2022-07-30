@@ -1,6 +1,8 @@
 const express = require('express');   // requiring express for future use.
 const path = require('path');  // requiring path for attaching path with the root file 
-const port = 8000;     
+const port = 8000;  
+// connecting database with the server
+const db = require('./config/databaseConnection');   
 
 
 // creating app of express
