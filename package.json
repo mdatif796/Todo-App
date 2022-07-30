@@ -1,0 +1,15 @@
+{
+  "name": "todoapp",
+  "version": "1.0.0",
+  "description": "This is the TODO App where user can add the TODO with their description, category of TODO, due date and many functionality. This app is connected with database also.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "todo",
+    "task"
+  ],
+  "author": "Atif",
+  "license": "ISC"
+}
