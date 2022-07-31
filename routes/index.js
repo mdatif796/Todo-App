@@ -4,13 +4,6 @@ const Todo = require('../models/todoList');
 
 const router = express.Router();
 
-// color array
-let colorArray = {
-    'Personal' : 'red',
-    'Work' : 'blue',
-    'Cleaning' : 'yellow',
-    'School' : 'skyblue'
-};
 
 router.get('/', function(req, res) {
     Todo.find({}, (err, todos) => {
@@ -19,8 +12,7 @@ router.get('/', function(req, res) {
         }
         // console.log(todos);
         return res.render('home', {
-            todos: todos,
-            colorArray: colorArray
+            todos: todos
         });
     });
 });
