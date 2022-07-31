@@ -1,1 +1,2 @@
-console.log("home.js loaded");
+let catBtn = document.getElementById('#heading');
+console.log(catBtn);

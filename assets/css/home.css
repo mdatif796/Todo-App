@@ -30,6 +30,14 @@ body{
     justify-content: space-evenly;
     border-bottom: 1px solid #ececec;
     padding-left: 1rem;
+    transition: all 0.5s ease-in-out;
+}
+
+#description-section:hover {
+    background-color: rgb(234, 249, 255);
+}
+#description-section:hover #description{
+    background-color: rgb(234, 249, 255);
 }
 
 label{
@@ -40,11 +48,12 @@ label{
 
 #description{
     height: 2rem;
-    width: 100%;
+    width: 95%;
     border: none;
     font-size: 1rem;
     outline: none;
     color: gray;
+    transition: all 0.5s ease-in-out;
     /* padding: 0; */
     /* margin-left: 5px; */
 }
@@ -56,6 +65,7 @@ label{
     border-bottom: 1px solid #ececec;
 }
 
+
 #category-section{
     width: 50%;
     height: 4rem;
@@ -64,6 +74,14 @@ label{
     justify-content: space-evenly;
     padding-left: 1rem;
     border-right: 1px solid #ececec;
+    transition: all 0.5s ease-in-out;
+}
+
+#category-section:hover #category{
+    background-color: rgb(234, 249, 255);
+}
+#category-section:hover{
+    background-color: rgb(234, 249, 255);
 }
 
 #category{
@@ -73,7 +91,9 @@ label{
     font-size: 1rem;
     color: gray;
     outline: none;
+    transition: all 0.5s ease-in-out;
 }
+
 
 #dueDate{
     width: 50%;
@@ -82,6 +102,14 @@ label{
     flex-direction: column;
     justify-content: space-evenly;
     padding-left: 1rem;
+    transition: all 0.5s ease-in-out;
+}
+
+#dueDate:hover #date{
+    background-color: rgb(234, 249, 255);
+}
+#dueDate:hover{
+    background-color: rgb(234, 249, 255);
 }
 
 #date{
@@ -91,6 +119,7 @@ label{
     font-size: 1rem;
     color: gray;
     outline: none;
+    transition: all 0.5s ease-in-out;
 }
 
 #add-delete{
@@ -129,5 +158,72 @@ label{
 
 #add-delete i{
     margin-right: 2px;
+}
+
+#todo-container{
+    width: 50%;
+    margin: auto;
+}
+
+.todo{
+    width: 95%;
+    height: 5rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #ececec;
+    padding: 0 1rem;
+}
+
+.task-container{
+    width: 70%;
+    height: 5rem;
+    display: flex;
+}
+
+.task{
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-time{
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.check{
+    height: 1rem;
+    margin-right: 1rem;
+    transform: scale(1.4);
+    margin-top: 1rem;
+}
+
+.task-time i{
+    color: gray;
+    margin-right: 0.7rem;
+}
+
+.task > p{
+    font-size: 1.2rem;
+    color: gray;
+    margin-top: 0.8rem;
+    margin-bottom: 1px;
+}
+
+span{
+    color: gray;
+    font-size: 14px;
+}
+
+.category-btn{
+    width: 12%;
+    height: 2.5rem;
+    font-size: 14px;
+    color: white;
+    border: 0;
+    background-color: red;
 }
 

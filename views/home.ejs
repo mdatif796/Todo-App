@@ -14,10 +14,10 @@
             <h1 id="heading">TODO App</h1>
         </div>
         <div id="form-input">
-            <form action="" method="post">
+            <form action="/create-todo" method="post">
                 <div id="description-section">
                     <label for="description">DESCRIPTION</label>
-                    <input type="text" id="description" required placeholder="What do you need to do?">
+                    <input name="description" type="text" id="description" required placeholder="What do you need to do?">
                 </div>
                 <div id="category-dueDate">
                     <div id="category-section">
@@ -32,7 +32,7 @@
                     </div>
                     <div id="dueDate">
                         <label for="date">DUE DATE</label>
-                        <input type="date" required id="date">
+                        <input name="dueDate" type="date" required id="date">
                     </div>
                 </div>
                 <div id="add-delete">
@@ -49,6 +49,25 @@
                 </div>
             </form>
         </div>
+    </div>
+    <div id="todo-container">
+        <% for(let todo of todos){%> 
+            <div class="todo">
+             <div class="task-container">
+                 <input type="checkbox" class="check" >
+                 <div class="task">
+                     <p><%= todo.description  %> </p>
+                     <div class="task-time">
+                         <i class="fa-solid fa-calendar-days"></i>
+                         <p><span><%= todo.dueDate.toDateString().slice(4,7)  %> <%= todo.dueDate.getDate()  %>, <%= todo.dueDate.getFullYear()  %> </span>  </p>
+                     </div>
+                 </div>
+             </div>
+             <% if(todo.category !== ""){ %> 
+                 <button class="category-btn"><%= todo.category  %> </button>
+             <%} %> 
+            </div>
+     <%} %> 
     </div>
 
     <script src="/js/home.js"></script>
