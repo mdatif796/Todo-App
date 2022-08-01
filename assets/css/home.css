@@ -16,7 +16,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 2px solid #ececec;
 }
 
 #heading{
@@ -30,7 +30,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 2px solid #ececec;
     padding-left: 1rem;
     transition: all 0.5s ease-in-out;
 }
@@ -64,7 +64,7 @@ label{
     width: 100%;
     height: 4rem;
     display: flex;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 2px solid #ececec;
 }
 
 
@@ -75,7 +75,7 @@ label{
     flex-direction: column;
     justify-content: space-evenly;
     padding-left: 1rem;
-    border-right: 1px solid #ececec;
+    border-right: 2px solid #ececec;
     transition: all 0.5s ease-in-out;
 }
 
@@ -174,7 +174,7 @@ label{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid #ececec;
+    border-top: 2px solid #ececec;
     padding: 0 1rem;
 }
 
@@ -226,5 +226,21 @@ span{
     font-size: 14px;
     color: white;
     border: 0;
+}
+
+
+/* datepicker ui */
+#ui-datepicker-div{
+    width: 21%;
+    background-color: rgb(234, 249, 255);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.ui-datepicker-header, .ui-widget-header, .ui-helper-clearfix, .ui-corner-all{
+    border: none;
+}
+
+.ui-datepicker-title{
+    border: none;
 }
 

@@ -7,6 +7,9 @@
     <title>Todo | App</title>
     <script src="https://kit.fontawesome.com/1799259c11.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 <body>
     <div id="main-container">
@@ -28,11 +31,12 @@
                             <option value="Work">Work</option>
                             <option value="School">School</option>
                             <option value="Cleaning">Cleaning</option>
+                            <option value="Others">Others</option>
                         </select> 
                     </div>
                     <div id="dueDate">
                         <label for="date">DUE DATE</label>
-                        <input name="dueDate" type="date" required id="date">
+                        <input name="dueDate" type="text" required id="date" placeholder="dd/mm/yyyy">
                     </div>
                 </div>
                 <div id="add-delete">
@@ -40,7 +44,7 @@
                         <i class="fa-solid fa-plus"></i>
                           ADD TASK
                     </button>
-                    <a href="">
+                    <a href="/delete-todo">
                         <button id="del-btn">
                             <i class="fa-solid fa-trash-can"></i>
                             DELETE TASKS
@@ -54,9 +58,9 @@
         <% for(let todo of todos){%> 
             <div class="todo">
              <div class="task-container">
-                 <input type="checkbox" class="check" >
+                 <input data-id="<%= todo._id %>" data-toggle="<%= todo.toggle %>" type="checkbox" class="check" >
                  <div class="task">
-                     <p><%= todo.description  %> </p>
+                     <p id="<%= todo._id %>"><%= todo.description  %> </p>
                      <div class="task-time">
                          <i class="fa-solid fa-calendar-days"></i>
                          <p><span><%= todo.dueDate.toDateString().slice(4,7)  %> <%= todo.dueDate.getDate()  %>, <%= todo.dueDate.getFullYear()  %> </span>  </p>
@@ -70,6 +74,7 @@
      <%} %> 
     </div>
 
+    
     <script src="/js/home.js"></script>
 </body>
 </html>

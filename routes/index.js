@@ -31,13 +31,26 @@ router.post('/create-todo', function(req, res){
     Todo.create({
         description: desc,
         category: req.body.category,
-        dueDate: req.body.dueDate
+        dueDate: req.body.dueDate,
+        toggle: false
         // if error occur while creating a todo
     }, (err) => {
         if(err){
             return console.log(`Error in creating a Todo : ${err}`);
         }
         // after creating a todo , redirect to home page
+        return res.redirect('/');
+    });
+});
+
+router.post('/todo-toggle', function(req, res){
+    Todo.findById(req.body.id, (err, todo) => {
+        if(err){
+            console.log("Error in toggling the checkbox", err);
+            return;
+        }
+        todo.toggle = !todo.toggle;
+        todo.save();
         return res.redirect('/');
     });
 });
