@@ -43,6 +43,8 @@ router.post('/create-todo', function(req, res){
     });
 });
 
+
+// post request for toggling the value in the database 
 router.post('/todo-toggle', function(req, res){
     Todo.findById(req.body.id, (err, todo) => {
         if(err){
@@ -51,6 +53,16 @@ router.post('/todo-toggle', function(req, res){
         }
         todo.toggle = !todo.toggle;
         todo.save();
+        return res.redirect('/');
+    });
+});
+
+// post request for deleting the todos by passing the array of all that id of todo which should be deleted
+router.post('/delete-todo', function(req, res){
+    Todo.findByIdAndDelete(req.body.id, function(err){
+        if(err){
+            return console.log(`Error in deleting the todo from the database ${err}`);
+        }
         return res.redirect('/');
     });
 });
