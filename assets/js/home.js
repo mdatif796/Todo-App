@@ -104,6 +104,7 @@ $('body').click(function(e){
 $('#del-btn').click(function(){
     // run a for loop to make a call request on every id of todo which should be deleted
     if(idArray.length === 0){
+        alert("Click on the checkbox for deleting the todos");
         return;
     }
     for(let id of idArray){
