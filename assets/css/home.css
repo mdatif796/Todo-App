@@ -245,3 +245,47 @@ span{
     border: none;
 }
 
+/* for responsiveness */
+@media only screen and (min-width: 360px){
+    #main-container{
+        width: 90%;
+    }
+
+    #add-delete button{
+        width: 32%;
+        font-size: 12px;
+        padding: 0px 1px;
+    }
+
+    #todo-container{
+        width: 80%;
+    }
+
+    .category-btn{
+        width: 22%;
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (min-width: 968px){
+    #main-container{
+        width: 50%;
+    }
+
+    #add-delete button{
+        width: 20%;
+        font-size: 0.7rem;
+        padding: 0px 1px;
+    }
+
+    #todo-container{
+        width: 45%;
+    }
+
+    .category-btn{
+        width: 12%;
+        font-size: 0.7rem;
+    }
+}
+

@@ -63,7 +63,17 @@ router.post('/delete-todo', function(req, res){
         if(err){
             return console.log(`Error in deleting the todo from the database ${err}`);
         }
-        return res.redirect('/');
+
+        // after deleting the todo, render the home page for updating the changes
+        return Todo.find({}, function(err, todos){
+            if(err){
+                return console.log(`Error in loading the data after deletion, ${err}`);
+            }
+            return res.render('home', {
+                todos : todos
+            });
+        });
+        // return res.redirect('/');
     });
 });
 

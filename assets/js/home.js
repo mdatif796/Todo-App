@@ -1,4 +1,4 @@
-// turn off auto complete for the input fields off
+// turn off auto complete for the input fields 
 $('input').attr('autocomplete', 'off');
 
 
