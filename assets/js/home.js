@@ -108,8 +108,10 @@ $('#del-btn').click(function(){
         return;
     }
     for(let id of idArray){
-        $.post('/delete-todo', {id: id});
+        $.post('/delete-todo', {id: id}, function(){
+            window.location.href = '/';
+        });
     }
     // for reloading the page after deleting the todo , so that the changes is visible to the user
-    window.location.reload();
+    // window.location.reload();
 });
