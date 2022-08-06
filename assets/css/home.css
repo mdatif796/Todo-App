@@ -3,6 +3,7 @@ body{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
     background-attachment: fixed;
+    background-color: aliceblue;
 }
 
 #main-container{
@@ -137,6 +138,7 @@ label{
     color: white;
     font-size: 0.8rem;
     border: 0;
+    transition: 1s all ease-in-out;
 }
 
 #add-btn{
@@ -144,6 +146,10 @@ label{
     height: 3rem;
     margin-right: 4px;
     background-color: rgb(31, 26, 26);
+}
+
+#add-btn:hover{
+    background-color: #5a4e4e;
 }
 /* 
 #add-delete a{
@@ -157,6 +163,10 @@ label{
     height: 3rem;
     margin-left: 3px;
     background-color: red;
+}
+
+#del-btn:hover{
+    background-color: #e04848;
 }
 
 #add-delete i{
@@ -177,6 +187,11 @@ label{
     justify-content: space-between;
     border-top: 2px solid #ececec;
     padding: 0 1rem;
+    transition: 0.7s all ease-in-out;
+}
+
+.todo:hover{
+    transform: scale(1.1);
 }
 
 .task-container{
@@ -288,4 +303,21 @@ span{
         font-size: 0.7rem;
     }
 }
+
+/* common styling */
+input{
+    background-color: transparent;
+}
+
+button{
+    border-radius: 2rem;
+}
+
+select{
+    background-color: transparent;
+}
+
+
+
+
 
