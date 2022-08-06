@@ -13,5 +13,5 @@ main().then(() => {
 
 // function for connecting with the database
 async function main(){
-    await mongoose.connect(`mongodb+srv://Admin-Atif:${process.env.DATABASE_PASS}@cluster0.lymyd.mongodb.net/?retryWrites=true&w=majority`);
+    await mongoose.connect(process.env.MONGODB_URI || `mongodb+srv://Admin-Atif:${process.env.DATABASE_PASS}@cluster0.lymyd.mongodb.net/?retryWrites=true&w=majority`);
 }

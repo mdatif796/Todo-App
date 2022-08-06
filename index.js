@@ -35,7 +35,7 @@ app.post('/', require('./routes/index.js'));
 
 
 // my express app listening on this port
-app.listen(port, (err) => {
+app.listen(process.env.PORT || port, (err) => {
     if(err){
         console.log(`Error in listening on the port:${port}`);
         return;
